@@ -6,7 +6,7 @@ import duckdb
 
 from bronze import load_bronze
 from config import DB_PATH
-from silver import build_silver
+from layers import build_layer
 
 logging.basicConfig(
     level=logging.INFO,
@@ -21,7 +21,8 @@ def main() -> None:
 
     with duckdb.connect(str(DB_PATH)) as con:
         load_bronze(con)
-        build_silver(con)
+        build_layer(con, "silver")
+        #build_layer(con, "gold")
 
     logger.info("Pipeline concluído.")
 
