@@ -7,6 +7,7 @@ import duckdb
 from bronze import load_bronze
 from config import DB_PATH
 from layers import build_layer
+from quality import run_quality_checks
 
 logging.basicConfig(
     level=logging.INFO,
@@ -23,6 +24,7 @@ def main() -> None:
         load_bronze(con)
         build_layer(con, "silver")
         build_layer(con, "gold")
+        run_quality_checks(con)
 
     logger.info("Pipeline concluído.")
 
