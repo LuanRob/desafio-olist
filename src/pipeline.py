@@ -22,7 +22,7 @@ def main() -> None:
     with duckdb.connect(str(DB_PATH)) as con:
         load_bronze(con)
         build_layer(con, "silver")
-        #build_layer(con, "gold")
+        build_layer(con, "gold")
 
     logger.info("Pipeline concluído.")
 
