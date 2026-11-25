@@ -4,7 +4,7 @@ Pipeline ELT que transforma os dados públicos do marketplace Olist em um mini D
 
 ## Visão geral
 
-- **Stack:** Python 3.13, DuckDB, SQL, pandas, matplotlib e Jupyter.
+- **Stack:** Python 3.13 (versão usada no desenvolvimento e nos testes), DuckDB, SQL, pandas, matplotlib e Jupyter.
 - **Arquitetura:** medalhão (bronze, silver e gold), com modelo dimensional na camada gold.
 - **Execução:** um único comando gera o Data Warehouse do zero em cerca de 5 segundos.
 
@@ -40,7 +40,7 @@ desafio-olist/
 
 ## Como executar do zero
 
-**Pré-requisitos:** Python 3.11 ou superior, Git e uma conta no Kaggle para baixar os dados.
+**Pré-requisitos:** Python 3.13 (versão testada), Git e uma conta no Kaggle para baixar os dados.
 
 1. Clone o repositório e entre na pasta:
    ```bash
